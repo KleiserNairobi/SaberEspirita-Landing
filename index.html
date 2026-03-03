@@ -479,11 +479,25 @@
                   ref={ref}
                   className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 >
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-sage-100 shadow-sm">
-                    <span className="flex h-2 w-2 rounded-full bg-sage-300 animate-pulse"></span>
-                    <span className="text-xs font-medium text-sage-400">
-                      Nova versão disponível
-                    </span>
+                  <div className="inline-flex items-center gap-3 text-xs font-medium text-sage-400 bg-white border border-sage-100 shadow-sm p-1.5 pr-5 rounded-full">
+                    <div className="flex -space-x-2">
+                      <img
+                        src="https://randomuser.me/api/portraits/women/44.jpg"
+                        alt="Foto de usuária estudante da Doutrina Espírita"
+                        className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                      />
+                      <img
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        alt="Foto de usuário estudando o Espiritismo"
+                        className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                      />
+                      <img
+                        src="https://randomuser.me/api/portraits/women/68.jpg"
+                        alt="Foto de usuária do aplicativo Saber Espírita"
+                        className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                      />
+                    </div>
+                    <p>Faça parte da nossa comunidade</p>
                   </div>
 
                   <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-sage-500 leading-tight">
@@ -536,30 +550,6 @@
                         </div>
                       </div>
                     </a>
-                  </div>
-
-                  {/* Prova Social */}
-                  <div className="pt-8 max-w-lg">
-                    <div className="inline-flex items-center gap-3 text-xs font-medium text-sage-400 bg-white border border-sage-100 shadow-sm p-1.5 pr-5 rounded-full">
-                      <div className="flex -space-x-2">
-                        <img
-                          src="https://randomuser.me/api/portraits/women/44.jpg"
-                          alt="Foto de usuária estudante da Doutrina Espírita"
-                          className="w-8 h-8 rounded-full border-2 border-white object-cover"
-                        />
-                        <img
-                          src="https://randomuser.me/api/portraits/men/32.jpg"
-                          alt="Foto de usuário estudando o Espiritismo"
-                          className="w-8 h-8 rounded-full border-2 border-white object-cover"
-                        />
-                        <img
-                          src="https://randomuser.me/api/portraits/women/68.jpg"
-                          alt="Foto de usuária do aplicativo Saber Espírita"
-                          className="w-8 h-8 rounded-full border-2 border-white object-cover"
-                        />
-                      </div>
-                      <p>Faça parte da nossa comunidade</p>
-                    </div>
                   </div>
                 </div>
 
