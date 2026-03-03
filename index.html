@@ -3,12 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saber Espírita - Iluminando mentes, confortando corações</title>
-    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <title>
+      Saber Espírita | Seu Aplicativo para Estudo da Doutrina Espírita
+    </title>
+    <link rel="icon" type="image/png" href="assets/logo512.png" />
     <meta
       name="description"
-      content="Estude, Fixe, Medite e Ore em um único ecossistema digital. Aprofunde seu entendimento espiritual com o Saber Espírita."
+      content="O Saber Espírita é o aplicativo completo para o estudo da Doutrina Espírita. Estude as obras de Allan Kardec, medite e fortaleça sua fé diariamente."
     />
+    <link rel="canonical" href="https://saberespirita.com/" />
+
+    <!-- Open Graph / Meta, WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://saberespirita.com/" />
+    <meta
+      property="og:title"
+      content="Saber Espírita | Aplicativo da Doutrina Espírita"
+    />
+    <meta
+      property="og:description"
+      content="Estudo da obra Kardecista, meditação guiada e preces."
+    />
+    <meta
+      property="og:image"
+      content="https://saberespirita.com/assets/logo512.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Saber Espírita",
+        "operatingSystem": "ANDROID, iOS",
+        "applicationCategory": "EducationalApplication",
+        "description": "Aplicativo educacional destinado ao aprofundamento filosófico, estruturado nas bases da Doutrina Espírita codificada por Allan Kardec.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        }
+      }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -282,7 +317,7 @@
             <div className="w-full h-full">
               <img
                 src="assets/home.png"
-                alt="Saber Espírita App"
+                alt="Captura de tela do aplicativo Saber Espírita focado no estudo da Doutrina Espírita"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -345,7 +380,7 @@
                 <div className="w-8 h-8 flex items-center justify-center">
                   <img
                     src="assets/logo.png"
-                    alt="Saber Espírita Logo"
+                    alt="Logotipo do Saber Espírita - Aplicativo de Estudos"
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -454,7 +489,8 @@
                   <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-sage-500 leading-tight">
                     Saber Espírita:{" "}
                     <span className="text-gradient italic">
-                      Aprofunde seu entendimento espiritual.
+                      O ecossistema digital que transforma estudo em evolução
+                      espiritual.
                     </span>
                   </h1>
 
@@ -474,6 +510,9 @@
                       <div className="text-left">
                         <div className="text-[10px] opacity-80">Baixar na</div>
                         <div className="text-sm font-bold">App Store</div>
+                        <div className="text-[9px] opacity-70 mt-0.5 font-normal">
+                          Baixe gratuitamente
+                        </div>
                       </div>
                     </a>
 
@@ -492,6 +531,9 @@
                           Baixar no
                         </div>
                         <div className="text-sm font-bold">Google Play</div>
+                        <div className="text-[9px] text-sage-400 mt-0.5 font-normal">
+                          Baixe gratuitamente
+                        </div>
                       </div>
                     </a>
                   </div>
@@ -502,17 +544,17 @@
                       <div className="flex -space-x-2">
                         <img
                           src="https://randomuser.me/api/portraits/women/44.jpg"
-                          alt="Estudante"
+                          alt="Foto de usuária estudante da Doutrina Espírita"
                           className="w-8 h-8 rounded-full border-2 border-white object-cover"
                         />
                         <img
                           src="https://randomuser.me/api/portraits/men/32.jpg"
-                          alt="Estudante"
+                          alt="Foto de usuário estudando o Espiritismo"
                           className="w-8 h-8 rounded-full border-2 border-white object-cover"
                         />
                         <img
                           src="https://randomuser.me/api/portraits/women/68.jpg"
-                          alt="Estudante"
+                          alt="Foto de usuária do aplicativo Saber Espírita"
                           className="w-8 h-8 rounded-full border-2 border-white object-cover"
                         />
                       </div>
@@ -616,7 +658,7 @@
                 className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage-500 mb-6">
-                  Você sente que poderia estudar mais… mas falta{" "}
+                  Você quer estudar mais a Doutrina Espírita… mas falta{" "}
                   <span className="italic text-sage-300">organização</span>?
                 </h2>
                 <p className="text-sage-400 leading-relaxed">
@@ -707,9 +749,9 @@
                   O Método
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage-500 mt-4 mb-6">
-                  Um método estruturado para{" "}
+                  A base estruturada para o{" "}
                   <span className="italic text-sage-300">
-                    crescer espiritualmente
+                    estudo do Espiritismo
                   </span>
                 </h2>
                 <p className="text-sage-400">
@@ -797,9 +839,11 @@
                     <div className="flex items-start gap-2">
                       <i
                         data-lucide="check-circle"
-                        className="w-5 h-5 flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 flex-shrink-0 mt-0.5 text-sage-100"
                       ></i>
-                      <span>Aprendizado seguro e validado</span>
+                      <span className="font-medium text-white">
+                        Selo de Fidelidade Doutrinária
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -828,7 +872,7 @@
                   </span>
                 </div>
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage-500 mb-6">
-                  Sabedoria e Acolhimento com{" "}
+                  Sabedoria Espírita e Acolhimento com{" "}
                   <span className="italic text-sage-300">
                     Inteligência Artificial
                   </span>
@@ -996,14 +1040,14 @@
             role: "Trabalhadora Espírita",
           },
           {
-            text: "O Saber Espírita me aproximou do Evangelho de forma leve e acessível. Hoje estudo com mais interesse e aplico os ensinamentos no dia a dia.",
-            author: "Fernanda Lima",
-            role: "Iniciante na Doutrina",
+            text: "Finalmente um app que leva a Doutrina a sério. As trilhas de estudo são profundas e os quizzes me ajudaram a fixar O Livro dos Espíritos como nunca.",
+            author: "Carlos M.",
+            role: "Estudante e Trabalhador Espírita",
           },
           {
-            text: "Finalmente um app que une estudo sério e ferramentas para a prática diária. Recomendo!",
-            author: "João Pedro",
-            role: "Membro da Casa Espírita",
+            text: "O chat com o Guia chegou num momento difícil da minha vida. Foi um abraço virtual que me trouxe de volta a paz. Ferramenta linda e necessária.",
+            author: "Ana P. S.",
+            role: "Usuária do Módulo Ore",
           },
           {
             text: "Sempre tive dúvidas sobre a Doutrina, mas o app me ajuda a compreender com clareza e confiança. É como ter um guia de estudos sempre comigo.”",
@@ -1115,14 +1159,14 @@
                 className={`text-center max-w-3xl mx-auto mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               >
                 <h2 className="font-serif text-3xl md:text-5xl font-bold text-sage-500 mb-6">
-                  Comece hoje sua jornada de{" "}
+                  Junte-se a milhares de pessoas nesta{" "}
                   <span className="text-gradient italic">
-                    estudo consciente
+                    jornada de evolução
                   </span>
                 </h2>
                 <p className="text-sage-400 text-lg mb-8 leading-relaxed">
-                  Chegou a hora de transformar seu estudo da Doutrina Espírita.
-                  Deixe a luz do conhecimento fiel iluminar o seu dia a dia.
+                  Baixe o Saber Espírita e encontre um caminho mais estruturado
+                  para a fé e o estudo diário. Comece sua jornada hoje.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -1136,6 +1180,9 @@
                     <div className="text-left">
                       <div className="text-[10px] opacity-80">Baixar na</div>
                       <div className="text-sm font-bold">App Store</div>
+                      <div className="text-[9px] opacity-70 mt-0.5 font-normal">
+                        Baixe gratuitamente
+                      </div>
                     </div>
                   </a>
 
@@ -1149,6 +1196,9 @@
                     <div className="text-left">
                       <div className="text-[10px] text-sage-400">Baixar no</div>
                       <div className="text-sm font-bold">Google Play</div>
+                      <div className="text-[9px] text-sage-400 mt-0.5 font-normal">
+                        Baixe gratuitamente
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -1168,7 +1218,7 @@
                     <div className="w-10 h-10 flex items-center justify-center">
                       <img
                         src="assets/logo.png"
-                        alt="Saber Espírita Logo"
+                        alt="Logotipo do Saber Espírita - Aplicativo de Estudos"
                         className="w-full h-full object-contain"
                       />
                     </div>
