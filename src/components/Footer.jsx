@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
                 <img
-                  src="assets/logo.png"
+                  src="/assets/logo.png"
                   alt="Logotipo do Saber Espírita - Aplicativo de Estudos"
                   className="w-full h-full object-contain"
                 />

@@ -27,7 +27,7 @@ const Navigation = () => {
         >
           <div className="w-8 h-8 flex items-center justify-center">
             <img
-              src="assets/logo.png"
+              src="/assets/logo.png"
               alt="Logotipo do Saber Espírita - Aplicativo de Estudos"
               className="w-full h-full object-contain"
             />

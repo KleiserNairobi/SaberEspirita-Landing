@@ -106,7 +106,7 @@ export const PhoneMockup = () => (
       <div className="absolute top-0 inset-x-0 h-4 bg-white/20 backdrop-blur-md z-20"></div>
       <div className="w-full h-full">
         <img
-          src="assets/home.png"
+          src="/assets/home.png"
           alt="Captura de tela do aplicativo Saber Espírita focado no estudo da Doutrina Espírita"
           className="w-full h-full object-cover"
         />

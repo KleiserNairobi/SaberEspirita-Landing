@@ -6,16 +6,7 @@ import "./index.css";
 const container = document.getElementById("root");
 
 if (container.hasChildNodes()) {
-  hydrateRoot(
-    container,
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
+  hydrateRoot(container, <App />);
 } else {
-  createRoot(container).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  );
+  createRoot(container).render(<App />);
 }
