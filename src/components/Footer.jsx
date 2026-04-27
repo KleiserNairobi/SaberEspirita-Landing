@@ -73,6 +73,8 @@ const Footer = () => {
                   src="/assets/logo.png"
                   alt="Logotipo do Saber Espírita - Aplicativo de Estudos"
                   className="w-full h-full object-contain"
+                  width="40"
+                  height="40"
                 />
               </div>
               <span className="font-serif text-2xl font-bold text-sage-500">
@@ -146,6 +148,18 @@ const Footer = () => {
                   className="hover:text-sage-300 transition-colors"
                 >
                   Depoimentos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("faq");
+                  }}
+                  className="hover:text-sage-300 transition-colors"
+                >
+                  FAQ
                 </a>
               </li>
             </ul>

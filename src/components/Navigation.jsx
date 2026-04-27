@@ -30,6 +30,8 @@ const Navigation = () => {
               src="/assets/logo.png"
               alt="Logotipo do Saber Espírita - Aplicativo de Estudos"
               className="w-full h-full object-contain"
+              width="32"
+              height="32"
             />
           </div>
           <span className="font-serif text-xl font-bold text-sage-500">
@@ -86,6 +88,16 @@ const Navigation = () => {
             className="hover:text-sage-500 transition-colors cursor-pointer"
           >
             Depoimentos
+          </a>
+          <a
+            href="#faq"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("faq");
+            }}
+            className="hover:text-sage-500 transition-colors cursor-pointer"
+          >
+            FAQ
           </a>
         </div>
         <button

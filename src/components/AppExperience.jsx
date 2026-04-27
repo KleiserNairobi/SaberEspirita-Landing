@@ -51,7 +51,7 @@ const AppExperience = () => {
           className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-sage-500 mb-6">
-            Experiência do App:{" "}
+            Aprenda Espiritismo no seu ritmo:{" "}
             <span className="italic text-sage-300">
               Simples. Profundo. Transformador.
             </span>

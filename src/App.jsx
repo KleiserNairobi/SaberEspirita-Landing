@@ -6,6 +6,7 @@ import PainPoints from "./components/PainPoints";
 import Features from "./components/Features";
 import AIChatbots from "./components/AIChatbots";
 import AppExperience from "./components/AppExperience";
+import FAQ from "./components/FAQ";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 
@@ -29,6 +30,7 @@ const App = () => {
       <Features />
       <AIChatbots />
       <AppExperience />
+      <FAQ />
       <Testimonials />
       <Footer />
     </div>

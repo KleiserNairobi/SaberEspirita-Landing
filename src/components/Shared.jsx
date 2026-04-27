@@ -109,6 +109,8 @@ export const PhoneMockup = () => (
           src="/assets/home.png"
           alt="Captura de tela do aplicativo Saber Espírita focado no estudo da Doutrina Espírita"
           className="w-full h-full object-cover"
+          width="288"
+          height="580"
         />
       </div>
     </div>

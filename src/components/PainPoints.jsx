@@ -76,7 +76,7 @@ const PainPoints = () => {
         <div className="mt-12 text-center">
           <p className="font-serif text-sage-300 italic text-xl md:text-2xl pt-4">
             Se você se identificou, o Saber Espírita foi feito para você.
-            <br className="hidden md:block" />É hora de transformar esses
+            <br className="hidden md:block" />{" "}É hora de transformar esses
             desafios em oportunidades de crescimento.
           </p>
         </div>

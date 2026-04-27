@@ -47,14 +47,14 @@ const Hero = () => {
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-sage-500 leading-tight">
               Saber Espírita: <br />
               <span className="text-gradient italic">
-                O ecossistema digital que transforma estudo em evolução
-                espiritual.
+                Evolução espiritual pela Doutrina Espírita, onde e quando
+                quiser.
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-sage-400 max-w-lg leading-relaxed">
-              Estude, Fixe, Medite e Ore em um único ecossistema digital. Viva o
-              Espiritismo todos os dias.
+              Estude, Fixe, Reflita, Medite e Ore em um único ecossistema
+              digital. Viva o Espiritismo todos os dias.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 relative z-10">
