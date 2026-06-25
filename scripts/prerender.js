@@ -36,7 +36,16 @@ async function prerender() {
   
   // Importa dinamicamente usando uma URL absoluta do arquivo para evitar erros do Node
   const fileUrl = new URL(`file://${entryServerFile}`);
-  const { render } = await import(fileUrl.href);
+  const module = await import(fileUrl.href);
+  
+  // Suporta exports diretos (ESM) ou via default (CommonJS / UMD compilados)
+  const render = module.render || (module.default && module.default.render);
+  
+  if (typeof render !== "function") {
+    console.error("Conteúdo do módulo importado:", module);
+    throw new Error("A função 'render' não foi encontrada ou não é uma função no entry-server!");
+  }
+
   const { html: appHtml } = render();
 
   // Substitui o placeholder pelo HTML renderizado
