@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Play, Apple, BookOpen, Brain, Leaf, Heart } from "lucide-react";
 import {
   VineBranch,
   VineWatermark,
@@ -6,6 +7,34 @@ import {
   useScrollAnimation,
   scrollToSection,
 } from "./Shared";
+
+const AnimatedCounter = ({ end, duration = 1500, start = 0 }) => {
+  const [count, setCount] = useState(end); // Começa com o valor final no SSR para SEO
+
+  useEffect(() => {
+    setCount(start); // No cliente, reinicia para o valor inicial antes de animar
+
+    let startTimestamp = null;
+    let frameId;
+
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * (end - start) + start));
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(step);
+      }
+    };
+
+    frameId = window.requestAnimationFrame(step);
+
+    return () => {
+      if (frameId) window.cancelAnimationFrame(frameId);
+    };
+  }, [end, duration, start]);
+
+  return <span className="font-bold text-sage-600 text-sm">{count.toLocaleString("pt-BR")}</span>;
+};
 
 const Hero = () => {
   const [ref, isVisible] = useScrollAnimation();
@@ -23,8 +52,8 @@ const Hero = () => {
             ref={ref}
             className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <div className="inline-flex items-center gap-3 text-xs font-medium text-sage-400 bg-white border border-sage-100 shadow-sm p-1.5 pr-5 rounded-full">
-              <div className="flex -space-x-2">
+            <div className="inline-flex items-center gap-3 text-xs font-medium text-sage-400 bg-white border border-sage-100 shadow-sm p-1.5 pr-5 rounded-full max-w-full">
+              <div className="flex -space-x-2 flex-shrink-0">
                 <img
                   src="https://randomuser.me/api/portraits/women/44.jpg"
                   alt="Foto de usuária estudante da Doutrina Espírita"
@@ -41,50 +70,50 @@ const Hero = () => {
                   className="w-8 h-8 rounded-full border-2 border-white object-cover"
                 />
               </div>
-              <p>Faça parte da nossa comunidade</p>
+              <p className="leading-none py-0.5">
+                Mais de <AnimatedCounter end={1000} /> pessoas estudando conosco
+              </p>
             </div>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-sage-500 leading-tight">
               Saber Espírita: <br />
               <span className="text-gradient italic">
-                Evolução espiritual pela Doutrina Espírita, onde e quando
-                quiser.
+                Cursos e Estudo Espírita Gratuitos de Allan Kardec.
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-sage-400 max-w-lg leading-relaxed">
-              Estude, Fixe, Reflita, Medite e Ore em um único ecossistema
-              digital. Viva o Espiritismo todos os dias.
+              Estude a Doutrina Espírita com cursos estruturados, faça quizzes de fixação, medite e ore em um único ecossistema digital 100% grátis.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-              <a
-                href="https://apps.apple.com/br/app/saber-esp%C3%ADrita/id6751443526"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-sage-500 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-sage-400 transition-all hover:scale-105 shadow-lg shadow-sage-300/30"
-              >
-                <i data-lucide="apple" className="w-6 h-6"></i>
-                <div className="text-left">
-                  <div className="text-[10px] opacity-80">Baixar na</div>
-                  <div className="text-sm font-bold">App Store</div>
-                  <div className="text-[9px] opacity-70 mt-0.5 font-normal">
-                    Baixe gratuitamente
-                  </div>
-                </div>
-              </a>
-
               <a
                 href="https://play.google.com/store/apps/details?id=app.saberespirita"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-white text-sage-500 border-2 border-sage-100 px-6 py-4 rounded-2xl font-semibold hover:border-sage-300 transition-all hover:scale-105"
               >
-                <i data-lucide="play" className="w-6 h-6 text-sage-300"></i>
+                <Play className="w-6 h-6 text-sage-300" />
                 <div className="text-left">
                   <div className="text-[10px] text-sage-400">Baixar no</div>
                   <div className="text-sm font-bold">Google Play</div>
                   <div className="text-[9px] text-sage-400 mt-0.5 font-normal">
+                    Baixe gratuitamente
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="https://apps.apple.com/br/app/saber-esp%C3%ADrita/id6751443526"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-sage-500 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-sage-400 transition-all hover:scale-105 shadow-lg shadow-sage-300/30"
+              >
+                <Apple className="w-6 h-6" />
+                <div className="text-left">
+                  <div className="text-[10px] opacity-80">Baixar na</div>
+                  <div className="text-sm font-bold">App Store</div>
+                  <div className="text-[9px] opacity-70 mt-0.5 font-normal">
                     Baixe gratuitamente
                   </div>
                 </div>
@@ -105,7 +134,7 @@ const Hero = () => {
               style={{ animationDelay: "0s" }}
               title="Estude"
             >
-              <i data-lucide="book-open" className="w-5 h-5 text-sage-300"></i>
+              <BookOpen className="w-5 h-5 text-sage-300" />
             </div>
 
             {/* Fixe (Cérebro/Quiz) - Base Esquerda */}
@@ -114,7 +143,7 @@ const Hero = () => {
               style={{ animationDelay: "1.5s" }}
               title="Fixe"
             >
-              <i data-lucide="brain" className="w-5 h-5 text-sage-300"></i>
+              <Brain className="w-5 h-5 text-sage-300" />
             </div>
 
             {/* Medite (Folha/Serenidade) - Topo Direita */}
@@ -123,7 +152,7 @@ const Hero = () => {
               style={{ animationDelay: "1s" }}
               title="Medite"
             >
-              <i data-lucide="leaf" className="w-5 h-5 text-sage-300"></i>
+              <Leaf className="w-5 h-5 text-sage-300" />
             </div>
 
             {/* Ore (Coração/Fé) - Base Direita */}
@@ -132,7 +161,7 @@ const Hero = () => {
               style={{ animationDelay: "2.5s" }}
               title="Ore"
             >
-              <i data-lucide="heart" className="w-5 h-5 text-sage-300"></i>
+              <Heart className="w-5 h-5 text-sage-300" />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Play, Apple, Mail, Instagram } from "lucide-react";
 import {
   VineBranch,
   VineWatermark,
@@ -29,32 +30,32 @@ const Footer = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="https://apps.apple.com/br/app/saber-esp%C3%ADrita/id6751443526"
+              href="https://play.google.com/store/apps/details?id=app.saberespirita"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-sage-500 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-sage-400 transition-all hover:scale-105 shadow-lg shadow-sage-300/30"
+              className="flex items-center justify-center gap-3 bg-white text-sage-500 border-2 border-sage-200 px-8 py-4 rounded-2xl font-semibold hover:border-sage-400 transition-all hover:scale-105"
             >
-              <i data-lucide="apple" className="w-6 h-6"></i>
+              <Play className="w-6 h-6 text-sage-300" />
               <div className="text-left">
-                <div className="text-[10px] opacity-80">Baixar na</div>
-                <div className="text-sm font-bold">App Store</div>
-                <div className="text-[9px] opacity-70 mt-0.5 font-normal">
+                <div className="text-[10px] text-sage-400">Baixar no</div>
+                <div className="text-sm font-bold">Google Play</div>
+                <div className="text-[9px] text-sage-400 mt-0.5 font-normal">
                   Baixe gratuitamente
                 </div>
               </div>
             </a>
 
             <a
-              href="https://play.google.com/store/apps/details?id=app.saberespirita"
+              href="https://apps.apple.com/br/app/saber-esp%C3%ADrita/id6751443526"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-white text-sage-500 border-2 border-sage-200 px-8 py-4 rounded-2xl font-semibold hover:border-sage-400 transition-all hover:scale-105"
+              className="flex items-center justify-center gap-3 bg-sage-500 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-sage-400 transition-all hover:scale-105 shadow-lg shadow-sage-300/30"
             >
-              <i data-lucide="play" className="w-6 h-6 text-sage-300"></i>
+              <Apple className="w-6 h-6" />
               <div className="text-left">
-                <div className="text-[10px] text-sage-400">Baixar no</div>
-                <div className="text-sm font-bold">Google Play</div>
-                <div className="text-[9px] text-sage-400 mt-0.5 font-normal">
+                <div className="text-[10px] opacity-80">Baixar na</div>
+                <div className="text-sm font-bold">App Store</div>
+                <div className="text-[9px] opacity-70 mt-0.5 font-normal">
                   Baixe gratuitamente
                 </div>
               </div>
@@ -223,11 +224,11 @@ const Footer = () => {
             <h4 className="font-semibold text-sage-500 mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-sage-400">
               <li className="flex items-center gap-2">
-                <i data-lucide="mail" className="w-4 h-4"></i>
+                <Mail className="w-4 h-4" />
                 <span>app.saberespirita@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
-                <i data-lucide="instagram" className="w-4 h-4"></i>
+                <Instagram className="w-4 h-4" />
                 <span>@comunidade.saberespirita</span>
               </li>
             </ul>

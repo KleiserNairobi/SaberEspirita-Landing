@@ -13,30 +13,30 @@ const Features = () => {
   const features = [
     {
       icon: "book-open",
-      title: "Estude",
-      subtitle: "Trilhas de Aprendizado Estruturado e Fiel",
-      desc: "Acesse cursos completos e módulos didáticos exclusivos sobre a Doutrina Espírita, desenvolvidos com rigor e fidelidade à Codificação. Aprenda no seu próprio ritmo, com uma jornada clara que acolhe desde o iniciante curioso até o estudioso avançado.",
+      title: "Estudo Espírita",
+      subtitle: "Cursos Estruturados e Fiéis a Allan Kardec",
+      desc: "Cursos completos sobre a Doutrina Espírita — d'O Livro dos Espíritos ao Evangelho, d'A Gênese à mediunidade — com aulas referenciadas diretamente nas obras, exercícios de fixação, fórum de reflexão com outros estudantes e glossário integrado. Ao final de cada aula, converse com o Sr. Allan, nosso assistente doutrinário baseado na Codificação, e aprofunde o que aprendeu. Estude no seu ritmo, com fidelidade à doutrina.",
       color: "bg-sage-300",
     },
     {
       icon: "brain",
-      title: "Fixe",
-      subtitle: "Testes Gamificados que Despertam o Interesse",
-      desc: "Nossa jornada de aprendizado inclui testes de conhecimento envolventes e gamificados! Integrados aos cursos, os quizzes validam sua compreensão de forma interativa e divertida, transformando a fixação do aprendizado em uma experiência prazerosa.",
+      title: "Fixação da Doutrina",
+      subtitle: "Quizzes e Testes Gamificados",
+      desc: "Mais de 1.200 questões baseadas diretamente nas obras da Codificação Espírita, organizadas por categoria e em constante expansão. Enfrente o Desafio Diário, teste seus reflexos no Verdade ou Mentira e acompanhe sua evolução com estatísticas detalhadas. Compare seu desempenho no placar da comunidade e transforme o estudo da doutrina em um hábito diário.",
       color: "bg-sage-200",
     },
     {
       icon: "leaf",
       title: "Medite",
       subtitle: "Encontre a Paz Interior",
-      desc: "Nosso módulo Medite oferece uma pausa compassiva no seu dia, com textos profundos para reflexão e áudios de meditações guiadas. Desenvolva sua serenidade interior e conecte-se com seu eu mais profundo.",
+      desc: "Um pensamento inspirador para começar o dia, textos para reflexão baseados nos ensinamentos espíritas e meditações guiadas em áudio com vozes de referência da doutrina, incluindo Divaldo Franco. Tudo em constante expansão, organizado para silenciar a mente e elevar o pensamento.",
       color: "bg-sage-200",
     },
     {
       icon: "heart",
       title: "Ore",
       subtitle: "Fortaleça Sua Fé",
-      desc: "Tenha à disposição um espaço completamente amigável focado em suas orações e preces diárias. Descubra categorias e textos inspiradores para os momentos em que seu coração precisa daquela elevação espiritual.",
+      desc: "Mais de 105 preces em constante expansão, reunidas das obras do Espiritismo, das Escrituras e de autores de referência da doutrina como Allan Kardec, Emmanuel e Bezerra de Menezes, organizadas para cada momento da sua alma. Tristeza, gratidão, dúvida — diga como você está e encontre a oração certa. Ou deixe a IA guiar suas palavras quando o coração precisar de auxílio.",
       color: "bg-sage-300",
     },
   ];
