@@ -66,7 +66,7 @@ const Footer = () => {
         <VineBranch className="w-full mb-12" />
 
         {/* Footer Content */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 flex items-center justify-center">
@@ -167,54 +167,22 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-sage-500 mb-4">Método</h4>
+            <h4 className="font-semibold text-sage-500 mb-4">Legal</h4>
             <ul className="space-y-2 text-sm text-sage-400">
               <li>
                 <a
-                  href="#metodo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("metodo");
-                  }}
-                  className="hover:text-sage-300 transition-colors"
+                  href="/terms"
+                  className="hover:text-sage-300 transition-colors inline-block"
                 >
-                  Estude
+                  Termos de Uso
                 </a>
               </li>
               <li>
                 <a
-                  href="#metodo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("metodo");
-                  }}
-                  className="hover:text-sage-300 transition-colors"
+                  href="/privacy"
+                  className="hover:text-sage-300 transition-colors inline-block"
                 >
-                  Fixe
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#metodo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("metodo");
-                  }}
-                  className="hover:text-sage-300 transition-colors"
-                >
-                  Medite
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#metodo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection("metodo");
-                  }}
-                  className="hover:text-sage-300 transition-colors"
-                >
-                  Ore
+                  Política de Privacidade
                 </a>
               </li>
             </ul>
@@ -224,12 +192,24 @@ const Footer = () => {
             <h4 className="font-semibold text-sage-500 mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-sage-400">
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>app.saberespirita@gmail.com</span>
+                <Mail className="w-4 h-4 shrink-0 text-sage-300" />
+                <a
+                  href="mailto:app.saberespirita@gmail.com"
+                  className="hover:text-sage-300 transition-colors break-all"
+                >
+                  app.saberespirita@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2">
-                <Instagram className="w-4 h-4" />
-                <span>@comunidade.saberespirita</span>
+                <Instagram className="w-4 h-4 shrink-0 text-sage-300" />
+                <a
+                  href="https://instagram.com/comunidade.saberespirita"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sage-300 transition-colors"
+                >
+                  @comunidade.saberespirita
+                </a>
               </li>
             </ul>
           </div>
@@ -239,12 +219,23 @@ const Footer = () => {
           <p className="text-sage-400 text-sm font-serif italic">
             "Saber Espírita — Iluminando mentes, confortando corações."
           </p>
-          <p className="text-sage-400 text-xs">
-            © 2025 Saber Espírita. Todos os direitos reservados.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-sage-400 text-xs">
+            <div className="flex items-center gap-3">
+              <a href="/terms" className="hover:text-sage-500 transition-colors">
+                Termos de Uso
+              </a>
+              <span>•</span>
+              <a href="/privacy" className="hover:text-sage-500 transition-colors">
+                Política de Privacidade
+              </a>
+            </div>
+            <span className="hidden sm:inline">•</span>
+            <p>© {new Date().getFullYear()} Saber Espírita. Todos os direitos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
 export default Footer;
+

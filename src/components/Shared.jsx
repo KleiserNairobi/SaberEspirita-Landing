@@ -147,5 +147,8 @@ export const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
+  } else if (typeof window !== "undefined") {
+    window.location.href = `/#${id}`;
   }
 };
+
